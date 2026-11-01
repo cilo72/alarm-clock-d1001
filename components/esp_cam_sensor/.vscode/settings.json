@@ -1,0 +1,12 @@
+{
+    "iis.configDir": "",
+    "idf.pythonInstallPath": "E:\\esp-idf\\tools\\idf-python\\3.11.2\\python.exe",
+    "files.associations": {
+        "bf2253_settings.h": "c",
+        "bf2253.h": "c",
+        "bf2253_regs.h": "c",
+        "bf3901.h": "c",
+        "bf2253_types.h": "c",
+        "ov5645.h": "c"
+    }
+}

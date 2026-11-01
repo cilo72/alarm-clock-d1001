@@ -1,0 +1,20 @@
+# ESP-IDF build output and downloaded dependencies
+/build/
+/build-*/
+/managed_components/
+/sdkconfig
+/sdkconfig.old
+
+# Local editor and agent settings
+/.vscode/
+/.idea/
+/.agents/
+/.codex/
+/.aws/
+.cache/
+
+# Python and operating system files
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

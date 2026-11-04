@@ -2,12 +2,6 @@ set(PROJ_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(SRCS_C "")
 set(SRCS_CPP "")
 
-set(APP_EXAMPLES_PHONE_SRC_DIR ${PROJ_SRC_DIR}/app_examples/phone)
-file(GLOB_RECURSE APP_EXAMPLES_PHONE_SRCS_C ${APP_EXAMPLES_PHONE_SRC_DIR}/*.c)
-file(GLOB_RECURSE APP_EXAMPLES_PHONE_SRCS_CPP ${APP_EXAMPLES_PHONE_SRC_DIR}/*.cpp)
-list(APPEND SRCS_C ${APP_EXAMPLES_PHONE_SRCS_C})
-list(APPEND SRCS_CPP ${APP_EXAMPLES_PHONE_SRCS_CPP})
-
 set(ASSETS_SRC_DIR ${PROJ_SRC_DIR}/assets)
 file(GLOB_RECURSE ASSETS_SRC_C ${ASSETS_SRC_DIR}/*.c)
 list(APPEND SRCS_C ${ASSETS_SRC_C})
@@ -42,12 +36,6 @@ set_source_files_properties(
     ${SRCS_CPP}
     PROPERTIES
         COMPILE_FLAGS "-Wno-missing-field-initializers"
-)
-
-set_source_files_properties(
-    ${APP_EXAMPLES_PHONE_SRCS_C}
-    PROPERTIES
-        COMPILE_FLAGS "-Wno-unused-variable"
 )
 
 target_compile_definitions(${COMPONENT_LIB} PRIVATE -DLV_LVGL_H_INCLUDE_SIMPLE)

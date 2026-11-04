@@ -1,5 +1,5 @@
 idf_component_register(
-    SRCS main.cpp logo_white.c
+    SRCS main.cpp
     INCLUDE_DIRS .)
 
 idf_component_get_property(LVGL_LIB lvgl__lvgl COMPONENT_LIB)
@@ -7,7 +7,6 @@ target_compile_options(
     ${LVGL_LIB} 
     PRIVATE 
         -DLV_LVGL_H_INCLUDE_SIMPLE
-        -DLV_USE_DEMO_MUSIC
 )
 
 if(CONFIG_ESP_BROOKESIA_MEMORY_USE_CUSTOM)
@@ -39,5 +38,3 @@ if(CONFIG_LV_MEM_CUSTOM)
             "-DLV_MEM_CUSTOM_ALLOC(x)=heap_caps_malloc(x, MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT)"
     )
 endif()
-
-spiffs_create_partition_image(storage ../spiffs FLASH_IN_PROJECT)

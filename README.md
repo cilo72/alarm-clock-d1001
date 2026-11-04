@@ -2,8 +2,8 @@
 
 Standalone ESP-IDF firmware project for the Seeed Studio reTerminal D1001,
 based on the [Seeed Studio factory firmware](https://github.com/Seeed-Studio/reTerminal-D1001/tree/5074d3b/examples/factory_firmware).
-The current version includes the factory applications and local clock/settings
-and display-brightness changes; alarm-clock development builds on this base.
+The firmware contains the brightness test page and Settings. The brightness
+test starts automatically and uses the CSI camera to measure ambient light.
 
 ## Build and flash
 
@@ -25,17 +25,13 @@ into `managed_components/` automatically. Keep `sdkconfig.defaults` and
 components, and local IDE settings are ignored. The component manager may
 regenerate local paths in `dependencies.lock` when the checkout location changes.
 
-## Factory firmware features
+## Included features
 
-- LCD display and touch input
-- Camera video and screenshots
-- Microphone recording and playback
-- Wi-Fi and LTE networking
-- Accelerometer and gyroscope readings
-- Battery management and real-time clock
+- Brightness test page with camera-based light measurement
+- Settings for Wi-Fi/LTE, audio volume, display brightness, clock and device information
+- LCD, touch, camera and board drivers needed by these two applications
 
-Some factory applications require a microSD card. The firmware can format the
-card as FAT32; back up its contents before using these applications.
+Factory demo applications, their media files and the startup logo have been removed.
 
 ## License
 

@@ -120,11 +120,6 @@ LV_IMG_DECLARE(img_app_setting);
 
 static TaskHandle_t lte_task_handle;
 
-extern lv_obj_t *ui_Min;
-extern lv_obj_t *ui_Hour;
-extern lv_obj_t *ui_Sec;
-extern lv_obj_t *ui_Date;
-extern lv_obj_t *ui_Clock_Number;
 extern pcf8563_handle_t pcf8563;
 
 static ESP_Brookesia_CoreAppData_t settingsCoreData()
